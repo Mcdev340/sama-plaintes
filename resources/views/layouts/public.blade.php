@@ -7,13 +7,14 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=fraunces:500,650|source-sans-3:400,600,700" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @stack('styles')
 </head>
 <body>
     <a class="skip" href="#contenu">Aller au contenu</a>
     <header class="site-header">
         <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-3 px-5 py-3">
             <a href="{{ route('accueil') }}" class="brand">
-                <span class="brand-mark" aria-hidden="true">SP</span>
+                <img class="brand-logo" src="{{ asset('images/logo-sama-plaintes.webp') }}" alt="">
                 <span>
                     <span class="display block text-xl leading-none text-baobab-dark">Sama Plaintes</span>
                     <span class="text-xs text-muted">Doléances citoyennes</span>
@@ -46,11 +47,12 @@
     <footer class="site-footer">
         <div class="mx-auto grid max-w-6xl gap-8 px-5 py-10 md:grid-cols-3">
             <div>
-                <p class="display text-2xl text-white">Sama Plaintes</p>
-                <p class="mt-2 max-w-xs text-sm leading-relaxed text-[#efe7d6]">Plateforme de suivi des plaintes citoyennes, de l’ISEP Amadou Trawaré de Diamniadio.</p>
+                <img class="brand-logo" src="{{ asset('images/logo-sama-plaintes.webp') }}" alt="">
+                <p class="display mt-3 text-2xl text-white">Sama Plaintes</p>
+                <p class="mt-2 max-w-xs text-sm leading-relaxed text-white/90">Plateforme de suivi des plaintes citoyennes, de l’ISEP Amadou Trawaré de Diamniadio.</p>
             </div>
             <div>
-                <p class="text-xs font-bold uppercase tracking-widest text-gold-soft">Pages</p>
+                <p class="text-xs font-bold uppercase tracking-widest text-white/80">Pages</p>
                 <ul class="mt-3 space-y-2 text-sm">
                     <li><a href="{{ route('fonctionnalites') }}">Fonctionnalités</a></li>
                     <li><a href="{{ route('a-propos') }}">À propos</a></li>
@@ -58,12 +60,13 @@
                 </ul>
             </div>
             <div>
-                <p class="text-xs font-bold uppercase tracking-widest text-gold-soft">Écrire</p>
+                <p class="text-xs font-bold uppercase tracking-widest text-white/80">Écrire</p>
                 <p class="mt-3 text-sm">contact@samaplaintes.sn</p>
                 <p class="text-sm">Diamniadio, Sénégal</p>
             </div>
         </div>
-        <p class="border-t border-white/10 px-5 py-4 text-center text-xs text-[#d9cbb4]">Projet de fin de formation 2024-2025 · Issa Bathily, Sékou Diedhiou, Mamadou Aliou Diallo, Moussa Kathieuness Correa</p>
+        <p class="border-t border-white/20 px-5 py-4 text-center text-xs text-white/80">Projet de fin de formation 2024-2025 · Issa Bathily, Sékou Diedhiou, Mamadou Aliou Diallo, Moussa Kathieuness Correa</p>
     </footer>
+    @stack('scripts')
 </body>
 </html>
