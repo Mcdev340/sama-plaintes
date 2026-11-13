@@ -12,8 +12,10 @@
     <a class="skip" href="#contenu">Aller au contenu</a>
     <div class="min-h-screen lg:grid lg:grid-cols-[17rem_minmax(0,1fr)]">
         <aside class="bg-baobab-dark text-white lg:min-h-screen">
-            <div class="flex items-center justify-between px-5 py-5">
-                <a href="{{ route('dashboard') }}" class="display text-2xl">Sama Plaintes</a>
+            <div class="px-5 py-5">
+                <a href="{{ route('dashboard') }}">
+                    <img class="brand-logo-side" src="{{ asset('images/logo-sama-plaintes.webp') }}" alt="Sama Plaintes">
+                </a>
             </div>
             <div class="px-3 pb-6">
                 @include('partials.nav')

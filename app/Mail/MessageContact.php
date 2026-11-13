@@ -18,6 +18,7 @@ class MessageContact extends Mailable
         public string $emailExpediteur,
         public string $sujetMessage,
         public string $corps,
+        public ?string $localisation = null,
     ) {}
 
     public function envelope(): Envelope

@@ -68,7 +68,7 @@
                 <h2 class="text-2xl">Échanges</h2>
                 <ul class="mt-4 space-y-3">
                     @forelse ($plainte->messages as $message)
-                        <li class="rounded-xl bg-paper p-3">
+                        <li class="rounded-xl bg-canopy p-3">
                             <p class="text-sm text-muted">{{ $message->auteur?->nomComplet() }} · {{ $message->created_at?->isoFormat('D MMM, HH:mm') }}</p>
                             <p>{{ $message->corps }}</p>
                         </li>
